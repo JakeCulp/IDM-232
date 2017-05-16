@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Drexel Powerlifting</title>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+</head>
+<body>
+<div class="grid">
+	<header>
+			<div class="logo"><img src="drexel_powerlifting_logo.png" width="320" height="100" alt="drexel powerlifting logo"></img></div>
+				<div class="links">
+					<a href="photos.html">Photos</a>
+					<a href="videos.html">Videos</a>
+					<a href="aboutus.html">About Us</a>
+					<a href="lifters.html">Lifters</a>
+					<a href="contact.html">Contact</a>
+				</div>
+	</header>
+	<main>
+		<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tr</p>
+
+	</main>
+	<aside></aside>
+
+	<footer>Drexel Powerlifting 2017</footer>
+
+</div> <!-- end of grid div -->
+
+</body>
+</html>
