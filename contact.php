@@ -4,7 +4,6 @@
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<meta http-equiv="refresh" content="0; URL='aboutus.html'" />
 	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -15,16 +14,27 @@
 				<div class="links">
 					<a href="photos.html">Photos</a>
 					<a href="aboutus.html">About Us</a>
-					<a href="lifters.php">Lifters</a>
+					<a href="lifters.html">Lifters</a>
 					<a href="contact.html">Contact</a>
 				</div>
 	</header>
 	<main>
-		<div id="about">
-		<p>We're an informal group of lifters who just want to get stronger. </p>
-		<p>Check out our <strong>Photos</strong> and our <strong>Lifters' Profiles</strong></p>
-		<p>Established 2016</p>
-	</div>
+		<form method="post"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			Name: <input type="text" name="name" value="<?php echo $name;?>">
+  		<br><br>
+  		E-mail: <input type="text" name="email" value="<?php echo $email;?>"><br>
+			Comments:<br>
+  		<textarea name="comment" rows="6" cols="10"><?php echo $comment;?></textarea>
+  		<br><br>
+			<input name="submit" type="submit" class="submitbtn" value="submit" />
+    	<?php if(isset( $_POST['Submit']) && $msg=='' )
+    	{?>
+        <div><center><h2>Thank you for submission</h2></center></div>
+    	<?php } else{?>
+        <p><?php echo $msg; ?><br></p></div>
+    	<?php }?>
+			</form>
+
 	</main>
 	<aside>
 		<a href="https://www.facebook.com/groups/DUPowerlifting"><button class="btn">Facebook Page</button></a>

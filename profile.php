@@ -1,10 +1,35 @@
+<?php
+$dbhost = "localhost";
+$dbuser = "jakeculp_du";
+$dbpass = "dupowerlifting";
+$dbname = "jakeculp_dupowerlifting";
+$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+  if (mysqli_connect_errno()) {
+    die ("Database connection failed: " .
+      mysqli_connect_error() .
+      " (" . mysqli_connect_errno() . ")"
+      );
+     }
+    //  else {
+    //    echo "Connection successful!";
+    //  }
+     //  get url id
+     $id = $_GET['id'];
+
+     $query = "SELECT * FROM `information` WHERE id=$id";
+     $result = mysqli_query($connection, $query);
+     if (!$result) {
+       die("Database query failed.");
+       echo $id;
+     }
+?>
 <html>
 <head>
 	<title>Drexel Powerlifting</title>
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<meta http-equiv="refresh" content="0; URL='aboutus.html'" />
 	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -20,10 +45,25 @@
 				</div>
 	</header>
 	<main>
-		<div id="about">
-		<p>We're an informal group of lifters who just want to get stronger. </p>
-		<p>Check out our <strong>Photos</strong> and our <strong>Lifters' Profiles</strong></p>
-		<p>Established 2016</p>
+
+		<div class="profile_container">
+		<div id="profile_pic">
+       <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+			<img src="<?php echo $row['photo'];?>">
+    </div>
+		<div id="bio">
+			<ul>
+				<li><?php echo $row['name'];?></li>
+				<li><?php echo $row['major'];?></li>
+				<li><?php echo $row['year'];?></li>
+				<li>Weight Class(kg): <?php echo $row['weight_class'];?></li>
+				<li>Best Total: <?php echo $row['best_total'];?></li>
+				<li>Favorite Lift: <?php echo $row['fav_lift'];?></li>
+				<li>Bio:</li>
+				<li><?php echo $row['bio'];?></li>
+			</ul>
+		</div>
+    <?php } ?>
 	</div>
 	</main>
 	<aside>
@@ -40,6 +80,11 @@
 	<footer>Drexel Powerlifting 2017</footer>
 
 </div> <!-- end of grid div -->
-
+<?php
+  mysqli_free_result($result);
+?>
+<?php
+  mysqli_close($connection);
+?>
 </body>
 </html>

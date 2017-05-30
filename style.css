@@ -9,7 +9,7 @@
 	max-width: 80rem;
 }
 
-header { 
+header {
 	grid-area: header;
 	padding-bottom: 4rem;
 }
@@ -105,6 +105,7 @@ a#openup {
 }
 
 
+
 /* lifters */
 
 ul {
@@ -113,7 +114,6 @@ ul {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
     justify-content: space-around;
 }
 
@@ -136,10 +136,18 @@ li {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
-	flex-wrap: wrap; 
+	flex-wrap: wrap;
 }
 
 #photos img {
+	display: flex;
+	padding-bottom: 1rem;
+	margin: 0 auto;
+	width: 100%;
+    height: auto;
+}
+
+#about img {
 	display: flex;
 	padding-bottom: 1rem;
 	margin: 0 auto;
@@ -334,7 +342,13 @@ textarea {
 		input[type=submit] {
 			width: 20rem;
 		}
+
+		.profile_container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#bio ul li {
+    padding: 0 0 1rem 0;
+		}
 }
-
-
-

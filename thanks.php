@@ -4,7 +4,6 @@
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<meta http-equiv="refresh" content="0; URL='aboutus.html'" />
 	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -20,11 +19,7 @@
 				</div>
 	</header>
 	<main>
-		<div id="about">
-		<p>We're an informal group of lifters who just want to get stronger. </p>
-		<p>Check out our <strong>Photos</strong> and our <strong>Lifters' Profiles</strong></p>
-		<p>Established 2016</p>
-	</div>
+    Thanks <?php echo $_POST["firstname"]; ?><br>
 	</main>
 	<aside>
 		<a href="https://www.facebook.com/groups/DUPowerlifting"><button class="btn">Facebook Page</button></a>
