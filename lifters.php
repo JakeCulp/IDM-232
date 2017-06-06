@@ -1,46 +1,11 @@
-<?php
-$dbhost = "localhost";
-$dbuser = "jakeculp_du";
-$dbpass = "dupowerlifting";
-$dbname = "jakeculp_dupowerlifting";
-$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-  if (mysqli_connect_errno()) {
-    die ("Database connection failed: " .
-      mysqli_connect_error() .
-      " (" . mysqli_connect_errno() . ")"
-      );
-     }
-    //  else {
-    //    echo "Connection successful!";
-    //  }
-     //  get url id
-
-
-     $query = "SELECT * FROM `information`";
-     $result = mysqli_query($connection, $query);
-     if (!$result) {
-       die("Database query failed.");
-     }
-?>
-<html>
-<head>
-	<title>Drexel Powerlifting</title>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-</head>
-<body>
-<div class="grid">
-	<header>
-			<div class="logo"><a href="aboutus.html"><img src="dupl_new.svg" alt="drexel powerlifting logo"></img></a></div>
+<?php include 'includes/config_lifters.php';?>
+<?php include "includes/_header.php"; ?>
+			<div class="logo"><a href="aboutus.php"><img src="dupl_new.svg" alt="drexel powerlifting logo"></img></a></div>
 				<div class="links">
-					<a href="photos.html">Photos</a>
-					<a href="aboutus.html">About Us</a>
+					<a href="photos.php">Photos</a>
+					<a href="aboutus.php">About Us</a>
 					<a href="lifters.php">Lifters</a>
-					<a href="contact.html">Contact</a>
+					<a href="contact.php">Contact</a>
 				</div>
 	</header>
 	<main>
