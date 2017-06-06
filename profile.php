@@ -18,12 +18,12 @@
 		<div id="bio">
 			<ul>
 				<li><?php echo $row['name'];?></li>
-				<li><?php echo $row['major'];?></li>
-				<li><?php echo $row['year'];?></li>
-				<li>Weight Class(kg): <?php echo $row['weight_class'];?></li>
-				<li>Best Total: <?php echo $row['best_total'];?></li>
-				<li>Favorite Lift: <?php echo $row['fav_lift'];?></li>
-				<li>Bio:</li>
+				<li><i><?php echo $row['major'];?></i></li>
+				<li><strong><?php echo $row['year'];?></strong></li>
+				<li><strong>Weight Class(kg):</strong><?php echo $row['weight_class'];?></li>
+				<li><strong>Best Total:</strong><?php echo $row['best_total'];?></li>
+				<li><strong>Favorite Lift:</strong><?php echo $row['fav_lift'];?></li>
+				<li><strong>Bio:</strong></li>
 				<li><?php echo $row['bio'];?></li>
 			</ul>
 		</div>
