@@ -23,7 +23,6 @@ aside {
 	grid-area: sidebar;
     display: flex;
     justify-content: flex-start;
-    background-color: #ececec;
     flex-direction: column;
     text-align: center;
     border-radius: 4px;
