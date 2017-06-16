@@ -194,6 +194,7 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 #bio ul li {
@@ -206,11 +207,12 @@ h2 {
 }
 
 #bio ul {
-	justify-content: flex-start;
-    padding: 1rem;
-    align-items: flex-start;
-    flex-direction: column;
-    max-width: 31.25rem;
+	justify-content: center;
+	padding: 1rem;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	max-width: 40rem;
 }
 
 #profile_pic img {
@@ -367,6 +369,8 @@ textarea {
 
 		.profile_container {
 			display: flex;
+			justify-content: center;
+			align-items: center;
 			flex-direction: column;
 		}
 
