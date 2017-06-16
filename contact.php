@@ -1,6 +1,8 @@
 <?php include "includes/_header.php"; ?>
 	<main class="animated slideInLeft">
 		<form method="post" action="thanks.php">
+			<p>Contact us to join the group and set up a training session with us!</p>
+			<br>
 			First name:<br>
 			<input type="text" name="firstname" value=""><br>
 			Email:<br>

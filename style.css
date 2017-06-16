@@ -139,6 +139,9 @@ li {
 	padding: 1rem;
 }
 
+#photos ul li {
+	width: 50%;
+}
 
 /* photos */
 
@@ -168,6 +171,7 @@ li {
   height: auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.32), 0 1px 15px 0 rgba(0, 0, 0, 0.29);
 }
+
 
 /* sidebar */
 
@@ -203,7 +207,7 @@ h2 {
 
 #bio ul li:first-child {
 	font-weight: bold;
-	font-size: 1.13rem;
+  font-size: 1.5rem;
 }
 
 #bio ul {
@@ -216,7 +220,7 @@ h2 {
 }
 
 #profile_pic img {
-	width: 15.63rem;
+	width: 20rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -376,5 +380,17 @@ textarea {
 
 		#bio ul li {
     padding: 0 0 1rem 0;
+		}
+
+		#photos ul li {
+			width: 100%;
+		}
+
+		li img {
+			width: 16rem;
+		}
+
+		form {
+			width: 25rem;
 		}
 }
